@@ -1,0 +1,523 @@
+body {
+  color: black;
+  margin-right: 0px;
+  margin-left: 0px;
+  background: rgb(83,98,98);
+background: radial-gradient(circle, rgba(83,98,98,1) 0%, rgba(1,1,4,1) 100%);
+  margin-top: 0%;
+  margin-bottom: 0%;
+  width: 100%;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0.5em;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  margin-top: 0%;
+  margin-bottom: 0;
+  height: 10%;
+}
+
+#name {
+  display: inline-block;
+  font-size: 120%;
+  margin-top: 5%;
+}
+
+#name_two {
+	display: none;
+}
+
+.hamburger {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 55px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  margin-top: 1%;
+  padding-bottom: 2%;
+  margin-right: 2.5%;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0px;
+  transition: 0.4s;
+  border-radius: 0.2em;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-top: 15%;
+  margin-bottom: none;
+  z-index: 98;
+  padding-top: 30%;
+  text-align: center;
+  transition: 0.4s;
+  background-color: black;
+  
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-family: "Rubik Beastly", cursive;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 200%;
+}
+
+.mobile-nav a:hover {
+  background-color: purple;
+  transition: 0.4s;
+}
+
+#face {
+  text-align: center;
+  margin-top: none;
+}
+
+#face_bac {
+  width: 100%;
+  text-align: center;
+  margin-top: 17%;
+}
+
+#link_wrapper {
+  display: none;
+}
+
+#slider {
+  overflow: hidden;
+  margin-right: 5%;
+  margin-left: 5%;
+  text-align: center;
+  color: white;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#about-sec {
+  text-align: center;
+  margin-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: white;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+  border-radius: 10px;
+}
+
+#projects {
+  display: none;
+}
+
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+.com {
+  margin-top: 7.5em;
+}
+
+#links {
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+input {
+  width: 85%;
+  margin-top: 1%;
+}
+
+textarea {
+  width: 85.5%;
+  margin-top: 1%;
+  resize: none;
+}
+
+#submit {
+  margin-bottom: 5%;
+  margin-top: 2%;
+  width: 87%;
+}
+
+form {
+  align-content: center;
+}
+
+@media screen and (min-width: 350px) {
+  header {
+    height: 8%;
+	margin-bottom: 0;
+  }
+
+  #face_bac {
+	  margin-top: 14%;
+  }
+
+  .mobile-nav {
+    margin-top: 14%;
+  }
+
+  .hamburger {
+    padding-top: 1.5%;
+  }
+
+  .submit {
+    width: 86.6%;
+    margin-left: 0.3%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+	header {
+		height: 8%;
+	}
+
+	#face_bac {
+		margin-top: 14%;
+	}
+}
+
+@media screen and (min-width: 400px) {
+  header {
+    height: 8%;
+  }
+
+  .hamburger {
+    margin-top: 1.5%;
+    width: 55px;
+    height: 55px;
+    padding-top: 1%;
+  }
+
+  .mobile-nav {
+    margin-top: 14%;
+  }
+
+  input {
+    width: 83%;
+  }
+
+  textarea {
+    margin-left: 0;
+    width: 83%;
+  }
+
+  #submit {
+    display: block;
+    text-align: center;
+    margin-left: 7.8%;
+    width: 84.8%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    height: 20%;
+  }
+
+  #face_bac {
+    margin-top: 11%;
+  }
+
+  textarea {
+    width: 83.5%;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  .hamburger {
+    margin-top: 2.8%;
+  }
+
+  textarea {
+    width: 83.3%;
+  }
+  
+}
+
+@media screen and (min-width: 730px) {
+  textarea {
+    width: 83.2%;
+  }
+
+  #submit {
+    width: 84.3%;
+    margin-left: 7.9%;
+  }
+
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    height: 6%;
+    margin-bottom: 10%;
+  }
+
+  #name {
+    margin-top: 2.5%;
+	font-size: 200%;
+	padding-left: 5%;
+  }
+
+  .hamburger {
+    margin-top: 1.5%;
+  }
+
+  .mobile-nav {
+    margin-top: 8%;
+  }
+
+  .mobile-nav a {
+    margin-top: 0%;
+	font-size: 400%;
+  }
+
+  #face_bac {
+    width: 70%;
+	border-radius: 5%;
+  }
+
+  #about-sec {
+    font-size: 175%;
+  }
+
+  #slider {
+    display: none;
+  }
+
+  #projects {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #projects img {
+    width: 35%;
+    margin: 2%;
+  }
+
+  #projects #one {
+    width: 33%;
+  }
+
+  #projects #three {
+    width: 32%;
+  }
+
+  .contact {
+    font-size: 150%;
+	
+  }
+
+  form {
+	  text-align: center;
+  }
+
+  input {
+    padding-bottom: 2%;
+    width: 39%;
+    display: inline-block;
+    margin-bottom: 1%;
+  }
+
+  textarea {
+    margin-left: 9.5%;
+    width: 80.2%;
+    display: block;
+  }
+
+  #submit {
+    text-align: center;
+    width: 30%;
+	  margin-left: 35%;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: none;
+  }
+
+  #name_two {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		font-size: 400%;
+	}
+
+  #name_two_wrapper {
+		text-align: center;
+		border-bottom: white 1px solid;
+	}
+
+  #link_wrapper {
+    text-align: center;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: none;
+  }
+
+  a {
+    font-size: 300%;
+    text-decoration: none;
+    color: white;
+
+  }
+
+  a:hover {
+    color: gray;
+  }
+
+  input {
+    width: 39.4%;
+  }
+
+  textarea {
+    width: 80.4%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  header {
+    height: 20%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+	header{ 
+		display: none;
+	}
+
+  #link_wrapper {
+    text-align: center;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: none;
+  }
+
+  a {
+    font-size: 300%;
+    text-decoration: none;
+    color: white;
+
+  }
+
+  a:hover {
+    color: gray;
+  }
+
+
+
+	#face_bac {
+    margin-top: none;
+		width: 55%;
+	}
+
+	#name_two_wrapper {
+		text-align: center;
+		border-bottom: white 1px solid;
+	}
+
+  #projects {
+    text-align: center;
+    color: white;
+    font-size: 175%;
+  }
+
+	#name_two {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		font-size: 400%;
+	}
+
+	textarea {
+		width: 80.2%;
+		margin-left: 9.7%;
+	}
+}
